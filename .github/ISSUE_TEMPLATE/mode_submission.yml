@@ -1,0 +1,32 @@
+name: Mode Submission
+description: Submit a custom user mode for review
+title: "[Mode Submission]: "
+labels: ["submission"]
+
+body:
+  - type: input
+    id: mode_name
+    attributes:
+      label: Mode Name
+      placeholder: "Creative Research Synthesizer"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What does this mode do?
+
+  - type: textarea
+    id: intended_use
+    attributes:
+      label: Intended Use Case
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Tested in latest app version?
+
+  - type: textarea
+    id: additional_notes
+    attributes:
+      label: Additional Notes
