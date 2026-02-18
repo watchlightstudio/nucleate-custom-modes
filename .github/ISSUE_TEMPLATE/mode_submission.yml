@@ -9,24 +9,42 @@ body:
     attributes:
       label: Mode Name
       placeholder: "Creative Research Synthesizer"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: mode_type
+    attributes:
+      label: Mode Type
+      description: Is this a full multi-prompt mode or a lightweight Labs mode?
+      options:
+        - Full User Mode (Daily / Weekly / Monthly prompts)
+        - Nucleate Labs Mode (Single system prompt)
+    validations:
+      required: true
 
   - type: textarea
     id: description
     attributes:
       label: Description
       description: What does this mode do?
+    validations:
+      required: true
 
   - type: textarea
     id: intended_use
     attributes:
       label: Intended Use Case
+      description: Who is this mode designed for?
+    validations:
+      required: true
 
-  - type: textarea
-    id: testing
+  - type: checkboxes
+    id: confirmation
     attributes:
-      label: Tested in latest app version?
-
-  - type: textarea
-    id: additional_notes
-    attributes:
-      label: Additional Notes
+      label: Submission Checklist
+      options:
+        - label: File name uses lowercase_snake_case.zip
+          required: true
+        - label: Mode imports cleanly into the app
+          required: true
